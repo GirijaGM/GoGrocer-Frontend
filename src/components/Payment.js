@@ -34,7 +34,7 @@ function Payment({ cart, setCart, setOrders }) {
       return; // open UPI app
     } 
     else {
-      await axios.post("https://gogrocer-backend.onrender.com/api/auth/orders", {
+      await axios.post("https://gogrocer-backend.onrender.com/api/orders", {
     items: cart,
     total
   });
@@ -65,7 +65,7 @@ function Payment({ cart, setCart, setOrders }) {
     return;
   }
 
-  await axios.post("https://gogrocer-backend.onrender.com/api/auth/orders", {
+  await axios.post("https://gogrocer-backend.onrender.com/api/orders", {
     items: cart,
     total
   });
